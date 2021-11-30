@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+}
+.header {
+    display: flex;
+    background-color: aqua
+}
+.nav{
+    background-color: blueviolet;
+}
+.judul{
+     color: white;   
+    background-color: red;    
+}
+.
+.nav a{
+    background-color: white;
+        color:blue;
+    font-size: 50px;
+}

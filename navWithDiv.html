@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>document</title>
+    <style>
+    body{
+        margin: 0px;
+        height: 100000px;
+        position: relative;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        background-color: hsl(9, 100%, 64%);
+        position: fixed;
+        height: 50px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+    }
+    .navigation{
+        
+        margin-left: 50px;
+        flex-direction: row;
+        display: flex;
+        height: 100%;
+    }
+    .nav{
+    }
+    .nav a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: hsl(9, 100%, 40%);
+        text-decoration: none;
+        height: 100%;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .nav a:hover{
+        background-color: rgba(255, 255, 255, .9);
+        color: teal;
+        border-top: 10px solid black    ;
+    }
+    .tombol {
+        width :50px;
+        height:50px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 1s;
+        cursor: pointer;
+        visibility: visible;
+        border-radius: 50%;
+    }
+     .sidenav{
+        left: 0px;
+    }
+     .setting{
+        right: 10px;
+    }
+    .tombol:active{
+        transition: background-color .2s;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 50%;
+    }
+    #sideParent{
+        visibility: hidden;
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 100;
+        top: 0px;
+    }
+    .side{
+        padding-top: 50px;
+        overflow: auto;
+        left: -20%;
+        position: fixed;
+        width: 20%;
+        height: 100%;
+        background-color: tomato;
+        box-shadow: 10px 0px 3px rgba(0, 0, 0, .5);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    li{
+        width: 100%;
+        height: 100px;
+    }
+    </style>
+    </head>
+<body>
+<header>
+    <div class="tombol sidenav" onclick="viewside()" >
+        <img src="chrome://browser/skin/home.svg" width="20px" height="20px" alt="">
+    </div>
+    <div class="navigation">
+        <div class="nav"><a href="">HOME</a></div>
+        <div class="nav"><a href="">PHOTO</a></div>
+        <div class="nav"><a href="">MUSIK</a></div>
+        <div class="nav"><a href="">VIDEO</a></div>
+        <div class="nav"><a href="">ABOUT</a></div>
+    </div>
+    <div class="tombol setting">
+        <img src="chrome://browser/skin/preferences/search.svg" width="20px" height="20px" alt="">
+    </div>
+</header>
+<div  id="sideParent">
+
+    <div id="side" class="side">
+
+        <div style="position: fixed;cursor: pointer;background-color:rgba(255, 255, 255, .5);width: 50px;height: 50px;justify-content: center;align-items: center;display: flex;left: 0px;top:0px" onclick="hideside()" >
+            <img src="chrome://browser/skin/home.svg" width="20px" height="20px" alt="">
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script>
+ function viewside(){
+document.getElementById("sideParent").style.visibility = "visible";
+document.getElementById("side").style.left = "0px";
+    }
+function hideside(){
+    document.getElementById("sideParent").style.visibility = "hidden";
+}
+</script>
+</body>
+</html>
